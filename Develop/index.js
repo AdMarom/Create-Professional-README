@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require ('inquirer');
+const { title } = require('process');
 const fs = require('fs').promises; 
 const generatemarkdown = require('./utils/generatemarkdowns');
 
@@ -8,15 +9,77 @@ const questions = () => {
    return inquirer.prompt([
     {
         type: 'input',
-        message: 'What is your user name?',
-        name: 'username'
+        message: 'What is the title of your Project?',
+        name: 'title'
+    },
+    {
+        type: 'input',
+        message: 'Provide a short description of your project',
+        name: 'description'
+    },
+    {
+        type: 'input',
+        message: 'Table of Contents',
+        name: 'contents'
+    },
+    {
+        type: 'input',
+        message: 'How to install and run project',
+        name: 'install'
+    },
+    {
+        type: 'input',
+        message: 'How to use project',
+        name: 'use'
+    },
+    {
+        type: 'input',
+        message: 'Credits',
+        name: 'credits'
+    },
+    {
+        type: 'list',
+        message: 'License',
+        name: 'license',
+        choices: [
+            {
+                name: 'Choice 1',
+                value: 1,
+            },
+            {
+                name: 'Choice 2',
+                value: 2,
+            },
+            {
+                name: 'Choice 3',
+                value: 3,
+            },
+        ]
     },
 
 ]);
 };
 
-const generateREADME = ({username}) =>
-`# ${username}`;
+const generateREADME = ({title, description, contents, install, use, credits, license}) =>
+`# ${title} 
+
+## Description 
+${description}
+
+## Table of Contents
+${contents}
+
+## Installation
+${install}
+
+## Use
+${use}
+
+## Credits
+${credits}
+
+## Liciense
+${license}`;
 
 // TODO: Create a function to write README file
 // TODO: Create a function to initialize app
