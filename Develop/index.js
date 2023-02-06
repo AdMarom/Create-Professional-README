@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require ('inquirer');
 const { title } = require('process');
+const generateMarkdown = require('./utils/generatemarkdowns');
 const fs = require('fs').promises; 
 const generatemarkdown = require('./utils/generatemarkdowns');
 
@@ -60,32 +61,12 @@ const questions = () => {
 ]);
 };
 
-const generateREADME = ({title, description, contents, install, use, credits, license}) =>
-`# ${title} 
-
-## Description 
-${description}
-
-## Table of Contents
-${contents}
-
-## Installation
-${install}
-
-## Use
-${use}
-
-## Credits
-${credits}
-
-## Liciense
-${license}`;
 
 // TODO: Create a function to write README file
 // TODO: Create a function to initialize app
 const init = () => {
     questions()
-      .then((answers) => fs.writeFile('README.md', generateREADME(answers)))
+      .then((answers) => fs.writeFile('README.md', generateMarkdown(answers)))
       .then(() => console.log('Successfully wrote to README.md'))
       .catch((err) => console.error(err));
   };
