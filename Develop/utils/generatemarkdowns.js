@@ -61,7 +61,7 @@ ${renderLicenseLink(data.license)}
 
 ${renderLicenseSection(data.license)}
 
-## Credits
+## Contributing
 ${data.credits}
 
 ## Tests

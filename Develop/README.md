@@ -1,9 +1,9 @@
 
-# rfdfgh 
-![git hub license] (https://img.shields.io/badge/license-MIT-blue.svg)
+# Professional README Generator 
+
 
 ## Description 
-sdfg
+A node js application that asks the user questions and will generate a README file from the users input.
 
 ## Table of Contents
 
@@ -26,24 +26,20 @@ sdfg
 
 
 ## Installation
-sdfgv
+Install node.js and go to command line to start application and type "node index.js"
 
 ## Usage
-sdfg
-
-* [license](#MIT)
+Answer questions presented to generate readme
 
 
-## License
-    
-    This project is licensed under MIT license
 
-## Credits
-sdfg
+
+## Contributing
+
 
 ## Tests
-sdfgh
+
 
 ## Questions
 
-Have questions? Email me at email@email or find me on ![GitHub] (https://github.com/AdMarom)!
+Have questions? Email me at adenamarom@gmail.com or find me on ![GitHub] (https://github.com/AdMarom)!
