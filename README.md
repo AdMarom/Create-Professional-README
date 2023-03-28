@@ -20,6 +20,8 @@ Answer questions presented to generate readme
 
 ## Links
 
+EXAMPLE README can be found under Develop folder under README.md
+
 Vimeo:
 [Walk Through] (https://vimeo.com/812609388)
 
