@@ -19,9 +19,19 @@ const questions = () => {
         name: 'description'
     },
     {
-        type: 'input',
+        type: 'list',
         message: 'Table of Contents',
-        name: 'contents'
+        name: 'contents',
+        choices: [
+            {
+                name: 'YES',
+                value: 'YES'
+            },
+            {
+                name: 'NO',
+                value: 'NO',
+            }
+        ]
     },
     {
         type: 'input',
@@ -44,16 +54,20 @@ const questions = () => {
         name: 'license',
         choices: [
             {
-                name: 'Choice 1',
-                value: 1,
+                name: 'MIT',
+                value: 'MIT',
             },
             {
-                name: 'Choice 2',
-                value: 2,
+                name: 'Apache',
+                value: 'Apache',
             },
             {
-                name: 'Choice 3',
-                value: 3,
+                name: 'Mozilla',
+                value: 'Mozilla',
+            },
+            {
+                name: 'None',
+                value: 'None',
             },
         ]
     },
@@ -66,7 +80,7 @@ const questions = () => {
 // TODO: Create a function to initialize app
 const init = () => {
     questions()
-      .then((answers) => fs.writeFile('README.md', generateMarkdown(answers)))
+      .then((answers) => fs.writeFile('README.md', generatemarkdown(answers)))
       .then(() => console.log('Successfully wrote to README.md'))
       .catch((err) => console.error(err));
   };
