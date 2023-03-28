@@ -49,6 +49,18 @@ const questions = () => {
         name: 'credits'
     },
     {
+        type: 'input',
+        message: 'Tests',
+        name: 'tests'
+
+    },
+    {
+        type: 'input',
+        message: 'Questions',
+        name: 'questions'
+
+    },
+    {
         type: 'list',
         message: 'License',
         name: 'license',

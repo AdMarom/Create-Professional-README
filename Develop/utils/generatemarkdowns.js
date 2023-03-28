@@ -29,10 +29,12 @@ function renderLicenseSection(license) {
 
 function renderContents(contents) {
   if (contents !== 'NO') {
-    return `\n* [Installation](#Installation)\n
-    \n* [Use](#Use)\n
-    \n* [Credits](#Credits)\n
-    \n* [License](#License)\n`;
+    return `\n [Installation](#Installation)\n
+    \n [Use](#Use)\n
+    \n [License](#License)\n
+    \n [Credits](#Credits)\n
+    \n [Tests](#Tests)\n
+    \n [Questions](#Questions)\n`;
   }
   return 'NA';
 }
@@ -43,6 +45,7 @@ function generateMarkdown(data) {
   return `
 # ${data.title} 
 ${renderLicenseBadge(data.license)}
+
 ## Description 
 ${data.description}
 
@@ -52,14 +55,20 @@ ${renderContents(data.contents)}
 ## Installation
 ${data.install}
 
-## Use
+## Usage
 ${data.use}
 ${renderLicenseLink(data.license)}
+
+${renderLicenseSection(data.license)}
 
 ## Credits
 ${data.credits}
 
-${renderLicenseSection(data.license)}`;
+## Tests
+${data.tests}
+
+## Questions
+${data.questions}`;
 }
 
 module.exports = generateMarkdown;
