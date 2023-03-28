@@ -68,7 +68,8 @@ ${data.credits}
 ${data.tests}
 
 ## Questions
-${data.questions}`;
+
+Have questions? Email me at ${data.email} or find me on ![GitHub] (https://github.com/${data.github})!`;
 }
 
 module.exports = generateMarkdown;
